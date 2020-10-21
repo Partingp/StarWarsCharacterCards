@@ -3,7 +3,7 @@ $(document).ready(function () {
     var selectedCharacters = new Map();
     getCharacters();
 
-
+    //Highlights/dehighlights selected cards (Up to a maximum of 3)
     $(".card").on("click", function (e) {
         var name = $(e.delegateTarget).find("h4").text();
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
             $("#selectionText").text("You have selected " + selectionText);
         }
     }
-
+    //Sends a POST containing character data to be saved
     $("#download").on("click", function (e) {
         var characterData = [];
         var itr = selectedCharacters.values();
@@ -63,6 +63,7 @@ $(document).ready(function () {
         });
     });
 
+    //De-selects selected cards
     $("#reset").on("click", function (e) {
         selectedCharacters = new Map();
         $("div").removeClass("bg-success");

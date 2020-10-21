@@ -13,12 +13,10 @@
 </head>
 <body>
 
-<!-- HEADER: Star wars logo -->
 <header align="center">
 <img src = "/Assets/Images/starWarsLogo.png" />
 </header>
 
-<!-- Text, Button, Carousel -->
 <div>
 
 	<div align="center">
@@ -26,7 +24,6 @@
 	</div>
 	
 	<div align="center">
-	 <!--Text with buttons div-->
 	 <button type="button" id="download" class="btn btn-success disabled">Download</button>
 	 <button type="button" id="reset" class="btn btn-danger">Reset</button>
 	</div>
@@ -34,6 +31,7 @@
 	<div id="starWarsCharacters" class="carousel slide container-sm" data-interval="false">
 		  <div class="carousel-inner container-sm">
 				<?php
+						#Displays 3x3 grid of cards for each carousel slide
 						function displayCharacters($characters)
 						{			
 							$index = 1;
@@ -73,7 +71,7 @@
 							}
 
 						}
-
+						#Gets character data from SWAPI
 						function &getCharacters($url,$characters)
 						{
 							$json = file_get_contents($url);
@@ -102,7 +100,6 @@
 
 						$characters = &getCharacters('https://swapi.dev/api/people/',array());
 						displayCharacters($characters);
-						#echo json_encode($characters);
 
 				?>
 				<script> var charactersJSON = <?php echo json_encode($characters); ?> ;</script>
@@ -120,8 +117,5 @@
 
 
 </div>
-
-<!-- -->
-
 </body>
 </html>
