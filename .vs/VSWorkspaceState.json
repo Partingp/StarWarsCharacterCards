@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Controllers",
+    "\\app\\Views",
+    "\\app\\Views\\errors",
+    "\\public",
+    "\\public\\Assets",
+    "\\public\\Assets\\CSS",
+    "\\public\\Assets\\Images",
+    "\\public\\Assets\\Javascript"
+  ],
+  "SelectedNode": "\\public\\Assets\\Javascript\\task.js",
+  "PreviewInSolutionExplorer": false
+}
